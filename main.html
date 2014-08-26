@@ -16,44 +16,34 @@
   <div class="left_col">
     
     We respond to Mr Honner's challenge with a combination of
-    open-source project organization and web technologies. Rather than
-    "A full-time staff of professional teachers, mathematicians,
-    designers, and editors ..." we turn to the latent potential of
-    volunteers, and describe how their efforts can be focused.
+    open-source and web technologies. Rather than "A full-time staff
+    of professional teachers, mathematicians, designers, and editors
+    ..." we turn to the latent potential of volunteers, and describe
+    how their efforts can be focused.
 
-    First though, consider the problems with a conventional
-    approach. While the costs to run such an organization would
-    be __relatively__ inexpensive (compared to the global costs of
-    textbooks) this is no guarantee of success.  For instance, the
+    While the costs to run such a full-time organization would be
+    <i>relatively</i> inexpensive (compared to the global costs of
+    textbooks say) this is no guarantee of success.  For instance, the
     Sage project---at least as grand in outlook---has failed to attact
     significant funding even in the face of the overwhelming sum spent
     on commercial software
     ([http://sagemath.blogspot.co.nz/2014/08/what-is-sagemathcloud-lets-clear-some.html,link]).
+    Better to attach, from the outset, the success of the project to
+    its grass-roots support.  For inspiration consider the develoment
+    of the Linux kernel, where success derives from its strong
+    community.
 
-    Furthermore, even with funding, it is arguable whether a
-    conventional organization is the best model. Its life will
-    *always* be precarious --- from budget to budget --- as financial
-    and political winds change. Better to attach, from the outset,
-    the success of the project to its grass-roots support.
-
-    The question, then, is not how to attract funding---but how to
-    organize the people that are willing to help for free. For
-    inspiration consider the develoment of the Linux kernel. Certainly
-    there are commercial aspects to Linux---but its continuing success
-    has grown from its volunteer community. Furthermore, it is not a
-    great leap to recognise in the Linux community---and the broader
-    open-source sofware community---the same types of people that
-    would be willing to rise to such a Grand Challenge.
+    Students, teachers, mathematicians, scientists, engineers, web
+    developers and writers should each be able to contrubute
+    (according to their interests and abilities) and consume
+    (according to their appetites). 
 
   </div>
 
   <div class="right_col">
 
-    Students, teachers, mathematicians, scientists, engineers, web
-    developers and writers should each be able to contrubute
-    (according to their interests and abilities) and consume
-    (according to their appetites). The technical challenge is to find
-    the common ground. Any solutiuon should:
+    The technical challenge is to find (and implement) the common
+    ground. Any solutiuon should:
 
     <ul>
       <li>be modular;</li>
@@ -68,13 +58,14 @@
       <li>have an adaptable workflow.</li>
     </ul>
 
+    Below we propose a solution to the Grand Challenge that has each
+    of these attributes.
+
   </div>
 
   <div class="clear"></div>
 
   <hr/>
-
-  <h3>A solution</h3>
 
   <div>
 
@@ -85,11 +76,11 @@
       short(ish), <b>modular</b> combinations of text, code and
       plots. 
 
-      Some very simple computation is on the right. You can edit the
+      A simple example computation is on the right. You can edit the
       upper(grey) box, press ctrl+enter, and see the results in the
       lower (dashed) box.
 
-      We note that <b>all computation is in the browser</b>, without
+      Note that <b>all computation is in the browser</b>, without
       interaction with any server.
 
     </div>    
@@ -107,14 +98,13 @@
 
   <div>
 
-    One of Matlab's (and Octave's) great attributes is the way it
-    handles matrices. Linear algebra is the cornerstone of applied and
-    computational mathematics and an intuitive notation is an
-    important first step.
+    One of Matlab's (and Octave's) great attributes is syntax. Linear
+    algebra is the cornerstone of applied and computational
+    mathematics and an intuitive notation is an important first step.
     
     Below we place the computation boxes side-by-side, so that the
     input and outputs correspond along a line. As above, the grey box
-    is editable, and is with ctrl+enter.
+    is editable, and is executed with ctrl+enter.
 
     <div class="left_col">
       <div data-file="arrays.coffee"></div>
@@ -132,9 +122,9 @@
 
   <div>
 
-    After a nice matrix notation, the next thing we need for
-    interactive <b>exploration</b> is plotting. In the example below
-    we have also exposed a little more programming to create a
+    After a nice notation, the next thing we need for
+    interactive <b>exploration</b> is easy plotting. In the example
+    below we have also exposed a little more programming to create a
     Weierstrass function---the definition of a function (line 4) and a
     cumulative sum (line 6) are easy to follow.
 
@@ -150,22 +140,18 @@
 
   <div class="clear"></div> 
 
-  Clearly an interactive, computational experience can be delivered in
-  the browser (any browser). Less clear is that we are using the same
-  technology as web developers. Since we're essentially talking the
-  same language, its easy for web developers to contribute. This is a
-  major step towards coordinating the different disciplines needed to
-  answer the Grand Challenge. It allows us, for instance, to 
+  <hr/>
 
-  For example, consider the Van der Pol oscillator
-
-  $$ \frac{d^2x}{dt^2}-\mu \left(1-x^2 \right) \frac{dx}{dt} + x =
-  0 $$
-
-  <span id = "intro-start-button" class = "text-button">click to
-	start</span> <span id = "intro-stop-button" class =
-	"text-button">click to stop</span>
-
+  Clearly interactive computation can be delivered in the browser (any
+  browser). Less clear is that we are using the same technology as web
+  developers. With a common language its easy for web developers to
+  contribute. A small technical step, but a leap towards coordinating
+  the different disciplines needed to answer the Grand Challenge. It
+  allows us, for instance, to present the Van der Pol oscillator
+  ($\ddot{x}-\mu(1-x^2)\dot{x}+x=0$) in an interesting way. <span id =
+  "intro-start-button" class = "text-button">click to
+  start</span> <span id = "intro-stop-button" class =
+  "text-button">click to stop</span>.
 
   <div id="intro-fig">
 
@@ -194,10 +180,40 @@
 
   </div>
 
+  <hr/>
+  
+  The guts of a blab is just a collection of files, managed in a
+  [http://en.wikipedia.org/wiki/Git_(software), git] repository and
+  served statically to the browser (<i>statically</i> means without
+  any processing by the server). The web application that presents
+  these files, and provides all the features of a blab, puzlet.js, is
+  itself and open source project.
+
+  This blab is managed by, and served from a project
+  on <a href="http://github.com,github.com">GitHub</a> (click the
+  "Fork me on GitHub banner to see"). Blabs can be
+  distributed---spanning different repositories, users etc.---and
+  share code with each other. For instance, the Van der Pol simulation
+  above imports an ODE solver from X.
+
+  For serious development---or just for offline viewing---repositories
+  can be cloned to a users local machine (see the "Fork me on GitHub"
+  banner at the top). At a local level a user can use whatever tools
+  (editor etc.) they choose.
+
+  Some tools for "online" developement (without cloning the repository
+  locally) are available and some are currently being
+  developed. Clicking the X button at the top of the page creates a
+  GitHub [http://en.wikipedia.org/wiki/GitHub#Gist,gist]---essentially
+  a kind of online GIT repository optimized for sharing. A gist can be
+  created anonymously (i.e., without a GitHub account), or can be
+  associated with a users GitHub account. A blab in a gist repository
+  can be edited, saved, and shared with anyone.
 
   <hr/>
 
-  
-
+  Our answer to the Grand Challenge is a open-source project based on
+  a collection of blabs. Indeed, we have created an organization,
+  STEMWebLab, on GitHub in which this blab is the first contribution.
 
 </div>
