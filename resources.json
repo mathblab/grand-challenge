@@ -5,11 +5,7 @@
     "main.coffee",
     "basics.coffee",
     "arrays.coffee",
-    "plotting.coffee",
     "weierstrass.coffee",
-    "primes.coffee",
-    "mathgifs.coffee",
-    "3d_demo.coffee",
     "/puzlet/js/d3.min.js",
     "/ode-fixed/main.js"
 ]
