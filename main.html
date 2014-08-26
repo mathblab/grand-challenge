@@ -2,57 +2,71 @@
 
   <h2>Rising to Mr Honner's Grand Challenge</h2>
 
-  ["Build and maintain a free, comprehensive, modular, and adaptable
-  repository of learning materials for all secondary mathematics
-  content."]
+  <blockquote style="color:green;">
+    Build and maintain a free, comprehensive, modular, and adaptable
+    repository of learning materials for all secondary mathematics
+    content.
+    <footer>
+      <cite>
+	<a href="http://mrhonner.com/archives/13828">---Patrick Honner</a>
+      </cite>
+    </footer>
+  </blockquote>
 
   <div class="left_col">
     
-    The key to realizing Mr Honners Grand Challenge is:
+    We respond to Mr Honner's challenge with a combination of
+    open-source project organization and web technologies. Rather than
+    "A full-time staff of professional teachers, mathematicians,
+    designers, and editors ..." we turn to the latent potential of
+    volunteers, and describe how their efforts can be focused.
 
-    [" A full-time staff of professional teachers, mathematicians,
-    designers, and editors ..."]
-
-    While the costs would be minor compared to the global costs of
-    textbooks---even for a large staff---this is no guarantee of
-    success. For instance, the Sage project---at least as grand in
-    outlook---has failed to attact significant funding even in the
-    face of the overwhelming sum spent on commercial software
+    First though, consider the problems with a conventional
+    approach. While the costs to run such an organization would
+    be __relatively__ inexpensive (compared to the global costs of
+    textbooks) this is no guarantee of success.  For instance, the
+    Sage project---at least as grand in outlook---has failed to attact
+    significant funding even in the face of the overwhelming sum spent
+    on commercial software
     ([http://sagemath.blogspot.co.nz/2014/08/what-is-sagemathcloud-lets-clear-some.html,link]).
 
-    Furthermore, even with funding, it is arguable that this is not
-    the best model. The life of such a project will *always* be
-    precarious --- from budget to budget --- as financial and
-    political winds change. Better to accept, from the outset, that
-    the success depends on grass-roots support.
+    Furthermore, even with funding, it is arguable whether a
+    conventional organization is the best model. Its life will
+    *always* be precarious --- from budget to budget --- as financial
+    and political winds change. Better to attach, from the outset,
+    the success of the project to its grass-roots support.
 
     The question, then, is not how to attract funding---but how to
     organize the people that are willing to help for free. For
-    inspiration consider the develoment of the Linux kernal. Certainly
+    inspiration consider the develoment of the Linux kernel. Certainly
     there are commercial aspects to Linux---but its continuing success
     has grown from its volunteer community. Furthermore, it is not a
     great leap to recognise in the Linux community---and the broader
     open-source sofware community---the same types of people that
-    would be willing to rise to Mr Honners Grand Challenge.
+    would be willing to rise to such a Grand Challenge.
 
   </div>
 
   <div class="right_col">
 
-    The leading players are:
+    Students, teachers, mathematicians, scientists, engineers, web
+    developers and writers should each be able to contrubute
+    (according to their interests and abilities) and consume
+    (according to their appetites). The technical challenge is to find
+    the common ground. Any solutiuon should:
 
     <ul>
-      <li>Students</li>
-      <li>Teachers</li>
-      <li>Mathematicians</li>
-      <li>Scientists and Engineers</li>
-      <li>Web developers</li>
-      <li>Writers</li>
+      <li>be modular;</li>
+      <li>work in all browsers;</li>
+      <li>be open source;</li>
+      <li>be based on web standards;</li>
+      <li>have a Matrix-friendly syntax;</li>
+      <li>require no server administration;</li>
+      <li>share code between contributions;</li>
+      <li>compute in the browser;</li>
+      <li>encourage exploration (not only explanation);</li>
+      <li>have an adaptable workflow.</li>
     </ul>
-
-    The technical challenge is to find the common ground for these six
-    roles---where all can contribute (according to their abilities)
-    and consume (according to their appetites).
 
   </div>
 
@@ -60,21 +74,130 @@
 
   <hr/>
 
-  <div class="left_col">
+  <h3>A solution</h3>
 
-    Must haves:
+  <div>
 
-    <ul>
-      <li>open source</li>
-      <li>based on web standards</li>
-      <li>all browsers</li>
-      <li>matrix-friendly syntax</li>
-      <li>no server administration</li>
-      <li>share code among modules (blabs)</li>
-      <li>compute in-browser</li>
-      <li>explain AND explore</li>
-    </ul>
+    <div class="left_col">
 
+      We call documents such as this a <b>blab</b>---short for web
+      laboratory, like blog is short for web log.  Blabs are typically
+      short(ish), <b>modular</b> combinations of text, code and
+      plots. 
+
+      Some very simple computation is on the right. You can edit the
+      upper(grey) box, press ctrl+enter, and see the results in the
+      lower (dashed) box.
+
+      We note that <b>all computation is in the browser</b>, without
+      interaction with any server.
+
+    </div>    
+
+    <div class="right_col">
+      <div data-file="basics.coffee"></div>
+      <div data-eval="basics.coffee"></div>
+    </div>
+
+  </div>
+
+  <div class="clear"></div> 
+
+  <hr/>
+
+  <div>
+
+    One of Matlab's (and Octave's) great attributes is the way it
+    handles matrices. Linear algebra is the cornerstone of applied and
+    computational mathematics and an intuitive notation is an
+    important first step.
     
+    Below we place the computation boxes side-by-side, so that the
+    input and outputs correspond along a line. As above, the grey box
+    is editable, and is with ctrl+enter.
+
+    <div class="left_col">
+      <div data-file="arrays.coffee"></div>
+    </div>    
+
+    <div class="right_col">
+      <div data-eval="arrays.coffee"></div>
+    </div>
     
+  </div>
+
+  <div class="clear"></div> 
+
+  <hr/>
+
+  <div>
+
+    After a nice matrix notation, the next thing we need for
+    interactive <b>exploration</b> is plotting. In the example below
+    we have also exposed a little more programming to create a
+    Weierstrass function---the definition of a function (line 4) and a
+    cumulative sum (line 6) are easy to follow.
+
+    <div class="left_col">
+      <div data-file="weierstrass.coffee"></div>
+    </div>
+
+    <div class="right_col">
+      <div data-eval="weierstrass.coffee"></div>
+    </div>
+
+  </div>
+
+  <div class="clear"></div> 
+
+  Clearly an interactive, computational experience can be delivered in
+  the browser (any browser). Less clear is that we are using the same
+  technology as web developers. Since we're essentially talking the
+  same language, its easy for web developers to contribute. This is a
+  major step towards coordinating the different disciplines needed to
+  answer the Grand Challenge. It allows us, for instance, to 
+
+  For example, consider the Van der Pol oscillator
+
+  $$ \frac{d^2x}{dt^2}-\mu \left(1-x^2 \right) \frac{dx}{dt} + x =
+  0 $$
+
+  <span id = "intro-start-button" class = "text-button">click to
+	start</span> <span id = "intro-stop-button" class =
+	"text-button">click to stop</span>
+
+
+  <div id="intro-fig">
+
+    <canvas id="intro-vector-field" class="vector-field"></canvas>
+
+    <div id="intro-oscillator"></div>
+    
+    <div id = "intro-controls">
+
+      <div id = "intro-checkbox">
+	<input type="checkbox" id="persist" value="showSunPhotons">Persistence</input>
+      </div>
+
+      <input type="range" id="mu-slider" step="0.1" min="0" max="5" value="1"></input>
+
+      <div id="mu-value"></div>
+      <div id="mu-label">$\mu$</div>
+
+    </div>
+	
+    <div id="x-scope" class="scope"></div>
+    <div id="y-scope" class="scope"></div>
+
+    <div id="x-label">$\color{green}{x}$</div>
+    <div id="y-label">$\color{red}{y}$</div>
+
+  </div>
+
+
+  <hr/>
+
+  
+
+
 </div>
