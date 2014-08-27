@@ -3,27 +3,22 @@
 # Temp fix - to be done in puzlet.js.
 Number.prototype.pow = (p) -> Math.pow this, p
 
-
 # Global stuff
 
 pi = Math.PI
 sin = Math.sin
 cos = Math.cos
-min = Math.min
-COS = (u) -> Math.cos(u*pi/180)
-SIN = (u) -> Math.sin(u*pi/180)
-R2 = Math.sqrt(2)
+
 repRow = (val, m) -> val for [1..m]
 {rk, ode} = $blab.ode # Import ODE solver
 
-
-# VdP equation
-f = (t, v, mu) -> 
+f = (t, v, mu) -> # VdP equation
     [
         v[1]
         mu*(1-v[0]*v[0])*v[1]-v[0]
     ]
 
+# Classes
 
 class Vector
 
@@ -45,19 +40,21 @@ class Vector
         @y = m*Math.sin(a)
         this
 
-class Figure
+
+class Figure # Namespace for globals
 
     @xMax = 4 # horizontal plot limit
     @yMax = 4 # vertical plot limit
     @margin = {top: 65, right: 65, bottom: 65, left: 65}
     @width = 450 - @margin.left - @margin.top
     @height = 450 - @margin.left - @margin.top
-    @xscale = d3.scale.linear()
+    @xScale = d3.scale.linear() # sim units -> screen units
         .domain([-@xMax, @xMax])
         .range([0, @width])
-    @yscale = d3.scale.linear()
+    @yScale = d3.scale.linear() # sim units -> screen units
         .domain([-@yMax, @yMax])
         .range([@height, 0])
+
 
 class Canvas
 
@@ -79,28 +76,30 @@ class Canvas
         @ctx.fillRect(pos.x, pos.y, size, size)
 
 
-class vfPoint # vector field point
+class VfPoint # vector field point
 
     width  = Figure.width
     height = Figure.height
     
-    constructor: (@x=1, @y=1, @mu=1) ->
-        @vel = new Vector 0, 0 # velocity
-        @d = 0 # distance
+    constructor: (@x=1, @y=1, @mu=1) -> # See state function f
+        @vel = new Vector 0, 0 # Velocity
+        @d = 0 # Distance
 
-    updateVel: ->
-        vel = f(0, [@x, @y], @mu)
+    updateVelocity: ->
+        vel = f(0, [@x, @y], @mu) # Global state function
         @vel.x = vel[0]
         @vel.y = vel[1]
 
     move: ->
-        @updateVel()
+        @updateVelocity()
         [@x, @y] = ode(rk[1], f, [0, 0.02], [@x, @y], @mu)[1]
         @d += @vel.mag()
 
-    visible: -> (-4 <= @x <= 4) and (-4 <= @y <= 4) and @d < 200
+    visible: -> (-Figure.xMax <= @x <= Figure.xMax) and
+        (-Figure.yMax <= @y <= Figure.yMax) and
+        @d < 200
     
-class Particle extends vfPoint
+class Particle extends VfPoint
 
     constructor: (@canvas, x, y, mu) ->
         super x, y, mu
@@ -109,16 +108,14 @@ class Particle extends vfPoint
         @color = ["red", "green", "blue"][Math.floor(3*Math.random())]
 
     draw: ->
-        pos = {x:Figure.xscale(@x), y:Figure.yscale(@y)}
+        pos = {x:Figure.xScale(@x), y:Figure.yScale(@y)}
         @canvas.square pos, @size, @color
 
-            
+
 class Emitter
     
     maxParticles: 500
     rate: 3
-    ch: Figure.height
-    cw: Figure.width
     
     constructor: (@canvas, @mu=1)->
         @particles = []
@@ -253,11 +250,11 @@ class Oscillator extends d3Object
         guide.attr("y2", @yscale Figure.yMax*sin(phi))
          
     initAxes: ->
-        @xscale = Figure.xscale
+        @xscale = Figure.xScale
         @xAxis = d3.svg.axis()
             .scale(@xscale)
             .orient("bottom")
-        @yscale = Figure.yscale
+        @yscale = Figure.yScale
         @yAxis = d3.svg.axis()
             .scale(@yscale)
             .orient("left")
@@ -359,7 +356,7 @@ class Scope extends d3Object
             .scale(@yScale)
             .orient("left")
 
-class IntroSim
+class VdPSim
 
     constructor: ->
 
@@ -372,11 +369,11 @@ class IntroSim
             guide1color: "transparent"
 
         @vectorField = new Emitter @canvas
-        @markerPoint = new vfPoint
+        @markerPoint = new VfPoint
 
         @scopeX = new Scope
             scope : "x-scope"
-            initVal : Figure.xscale(@markerPoint.x)
+            initVal : Figure.xScale(@markerPoint.x)
             color : "green"
             yMin : -4
             yMax : 4
@@ -387,7 +384,7 @@ class IntroSim
 
         @scopeY = new Scope
             scope : "y-scope"
-            initVal: Figure.yscale(@markerPoint.y)
+            initVal: Figure.yScale(@markerPoint.y)
             color : "red"
             yMin : -4
             yMax : 4
@@ -404,8 +401,6 @@ class IntroSim
         d3.selectAll("#intro-stop-button").on "click", => @stop()
         d3.selectAll("#intro-start-button").on "click", => @start()
 
-        #setTimeout (=> @animate() ), 2000
-
     updateMu: ->
         k = parseFloat(d3.select("#mu-slider").property("value"))
         @markerPoint.mu = k
@@ -419,14 +414,14 @@ class IntroSim
         @drawMarker()
 
     snapshot2: ->
-        @scopeX.draw Figure.xscale(-1*@markerPoint.x) # ? -1 ?
-        @scopeY.draw Figure.yscale(@markerPoint.y)
+        @scopeX.draw Figure.xScale(-1*@markerPoint.x) # ? -1 ?
+        @scopeY.draw Figure.yScale(@markerPoint.y)
 
     drawMarker: ->
         @markerPoint.move()
         @oscillator.moveMarker(@oscillator.marker0,
-            Figure.xscale(@markerPoint.x),
-            Figure.yscale(@markerPoint.y)
+            Figure.xScale(@markerPoint.x),
+            Figure.yScale(@markerPoint.y)
         )
 
     animate: ->
@@ -442,6 +437,4 @@ class IntroSim
     start: ->
         setTimeout (=> @animate() ), 20
 
-new IntroSim
-
-
+new VdPSim
