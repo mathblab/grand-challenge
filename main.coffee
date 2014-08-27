@@ -398,8 +398,8 @@ class VdPSim
         $("#mu-slider").on "change", => @updateMu()
         @updateMu()
 
-        d3.selectAll("#intro-stop-button").on "click", => @stop()
-        d3.selectAll("#intro-start-button").on "click", => @start()
+        d3.selectAll("#VdP-stop-button").on "click", => @stop()
+        d3.selectAll("#VdP-start-button").on "click", => @start()
 
     updateMu: ->
         k = parseFloat(d3.select("#mu-slider").property("value"))
