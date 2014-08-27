@@ -55,7 +55,7 @@
 
 #VdP-checkbox {
     position: absolute;
-    top: 20px;
+    top: 27px;
     left: 15px;
     width: 120px;
     height: 20px;
@@ -73,13 +73,13 @@
 
 #mu-value {
     position: absolute;
-    top: 20px;
+    top: 27px;
     left: 350px;
 }
 
 #mu-label {
     position: absolute;
-    top: 20px;
+    top: 27px;
     left: 150px;
 }
 
@@ -140,4 +140,18 @@
 #y-scope {
     top: 0px;
     right: 0px;
+}
+
+input[type="range"]{
+    margin-top: 10px;
+    background: #aaa;
+    width: 130px;
+    height: 6px;
+    -webkit-appearance: none;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -wekkit-border-radius: 8px;
+    -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+    -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
 }
