@@ -360,9 +360,9 @@ class VdPSim
 
     constructor: ->
 
-        @canvas = new Canvas "#intro-vector-field"
+        @canvas = new Canvas "#VdP-vector-field"
 
-        @oscillator = new Oscillator "intro-oscillator",
+        @oscillator = new Oscillator "VdP-oscillator",
             marker0color: "black"
             marker1color: "transparent"
             guide0color: "transparent"
