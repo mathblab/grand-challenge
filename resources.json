@@ -1,7 +1,7 @@
 [
     "http://visjs.org/dist/vis.js",
     "/puzlet/js/d3.min.js",
-    "http://puzlet.org/ode-fixed/main.js",
+    "http://puzlet.org/ode-fixed/main.coffee",
     "main.html",
     "main.css",
     "main.coffee",
