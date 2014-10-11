@@ -3,9 +3,13 @@
     "/puzlet/js/d3.min.js",
     "http://puzlet.org/ode-fixed/runge-kutta.coffee",
     "main.html",
+    "slides.html",
     "main.css",
-    "main.coffee",
     "basics.coffee",
     "arrays.coffee",
-    "weierstrass.coffee"
+    "weierstrass.coffee",
+    "http://stemblab.github.io/vanderpol-portrait/osc.coffee",
+    "http://stemblab.github.io/vanderpol-portrait/vdp.coffee",
+    "scope.coffee",
+    "main.coffee"
 ]

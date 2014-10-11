@@ -1,6 +1,6 @@
 <div id="text">
 
-==Rising to Mr Honner's Grand Challenge==
+  <h2>Rising to Mr Honner's Grand Challenge</h2>
 
   <blockquote style="color:green;">
     Build and maintain a free, comprehensive, modular, and adaptable
@@ -14,81 +14,87 @@
   </blockquote>
 
   <div class="left_col">
-    
-    We respond to [https://twitter.com/MrHonner,@MrHonner]'s
+
+    <b>We respond to [https://twitter.com/MrHonner,@MrHonner]'s
     [http://en.wikipedia.org/wiki/Web_standards,challenge] with a
-    combination of open-source and web technologies. Rather than "A
-    full-time staff of professional teachers, mathematicians,
-    designers, and editors ..." we turn to the latent potential of
-    volunteers, and describe how their efforts can be focused.
+    combination of open-source and web technologies. </b>
+    
+    In his challenge Honner imagines "A full-time staff of
+    professional teachers, mathematicians, designers, and editors
+    ...". Assuming the costs would be minor compared to the amount
+    spent yearly on textbooks alone, this is a logical approach.
+    However, there are counter-examples in practice.
+     
+    The [http://www.sagemath.org/,Sage] project is a free rival to
+    Mathematica, Matlab etc. In spite of its noble goals, and
+    notwithstanding the USD 50 million a year spent just on
+    Mathematica, Sage
+    [http://sagemath.blogspot.co.nz/2014/08/what-is-sagemathcloud-lets-clear-some.html,
+    cannot fund even a single full-time developer]. The brutal reality
+    is that entrenched industries are difficult to
+    disrupt---regardless of logic.
 
-    While the costs to run Honner's full-time organization would be
-    <i>relatively</i> inexpensive (compared to the global costs of
-    textbooks say) this is no guarantee of success.  For instance, the
-    [http://www.sagemath.org/,Sage] project---a Grand Challenge in its
-    own right---has failed to attact significant funding even in the
-    face of the overwhelming sum spent on commercial software
-    ([http://sagemath.blogspot.com/2014/08/what-is-sagemathcloud-lets-clear-some.html,link]).
-    Better to attach, from the outset, the success of the challenge to
-    its grass-roots support.
-
-    For inspiration consider the develoment of the Linux kernel, where
-    success derives from its strong community.  Students, teachers,
-    mathematicians, scientists, engineers, web developers and writers
-    should each be able to contrubute to the Grand Challenge
-    (according to their interests and abilities) and consume it
-    (according to their appetites).
+    For inspiration, we look to Wikipedia and Linux. These projects
+    rely on loosely-organized, grass-roots volunteers. Each
+    contributing according to their interests, abilities and, often,
+    to satisfy their own needs. In both cases---and we propose for the
+    Grand Challenge---the key is to provide an environment where
+    contributors from different, but related, disciplines can focus
+    and multiply their efforts.
 
   </div>
 
   <div class="right_col">
 
-    The technical challenge is to find (and implement) the common
-    ground. Any solutiuon should:
+    We feel that the Grand Challenge should be a call to Students,
+    teachers, mathematicians, scientists, engineers, web developers
+    and writers --- not to administrators or beurocrats or
+    financiers. To this end we have created a foundation for the Grand
+    Challenge based around standard web technologies (HTML, CSS and
+    Javascript) and source control (GIT) that:
 
     <ul>
-      <li>be modular;</li>
-      <li>work in all major browsers;</li>
-      <li>be
-      [http://en.wikipedia.org/wiki/Free_and_open-source_software,free
+      <li>is modular, and in particular---</li>
+      <li>shares and reuses code;</li>
+      <li>is [http://en.wikipedia.org/wiki/Free_and_open-source_software,free
       and open source];</li>
-      <li>be based on [http://en.wikipedia.org/wiki/Web_standards,web standards];</li>
-      <li>have a matrix-friendly syntax;</li>
-      <li>beautifully present $\LaTeX$: $\left(e^{i\pi}+1=0\right)$</li>
-      <li>require zero server administration and costs;</li>
-      <li>share and resuse code;</li>
-      <li>compute in the browser;</li>
-      <li>encourage exploration;</li>
-      <li>have an adaptable workflow;</li>
-      <li>encourage contribution from many disciplines.</li>
+      <li>has matrix-friendly syntax;</li>
+      <li>beautifully presents $\LaTeX$;</li>
+      <li>is free to maintain (zero server administration);</li>
+      <li>computes in the browser;</li>
+      <li>has an adaptable workflow, and in particular---</li>
+      <li>allows students to contribute, do homework, etc.;</li>
+      <li>encourages contribution from many disciplines.</li>
     </ul>
 
-    Below we describe a solution to the Grand Challenge with these
-    attributes. In summary, we propose a collection of rich documents
-    (of which this is an example), organized as a open-source software
-    project ([https://github.com/puzlet/grand-challenge,Fork me on
-    GitHub!]).
+    In summary, we propose a collection of rich source-controlled
+    documents, organized as a open-source software project. Indeed,
+    this is the first such document and we explore its capabilities
+    below.
 
   </div>
 
   <div class="clear"></div>
 
+  <br/>
   <hr/>
+  <br/>
 
   <div>
 
     <div class="left_col">
 
-      We call documents such as this a <b>blab</b>---short for web
-      laboratory, like blog is short for web log.  Blabs are typically
-      short(ish), <b>modular</b> combinations of text, code and
-      plots. 
+      We call documents such as this a <span class="pz_text"
+	ref="blab_note">blab</span>---short for web laboratory, like
+	blog is short for web log.  Blabs are typically
+	short(ish), modular combinations of text, code, plots
+	and animation.
 
       A simple example computation is on the right. You can edit the
       upper (grey) box, press ctrl+enter, and see the results in the
       lower (dashed) box.
 
-      Note that <b>all computation is in the browser</b>, without
+      Note that all computation is in the browser, without
       interaction with any server.
 
     </div>    
@@ -100,16 +106,22 @@
 
   </div>
 
+  <div class="pz_note" id="blab_note"> 
+    For more examples see [http://puzlet.org/, http://puzlet.org/.]
+  </div>
+
   <div class="clear"></div> 
 
+  <br/>
   <hr/>
+  <br/>
 
   <div>
 
-    One of Matlab's (and Octave's) great attributes is its
-    <b>matrix-friendly syntax</b>. Linear algebra is the cornerstone
-    of applied and computational mathematics and an intuitive notation
-    is an important first step.
+    One of Matlab's (and Octave's) great attributes is a
+    matrix-friendly syntax. Linear algebra is the cornerstone of
+    applied and computational mathematics and an intuitive notation is
+    important.
     
     Below we place the computation boxes side-by-side, so that the
     input and outputs correspond along a line. As above, the grey box
@@ -128,13 +140,15 @@
 
   <div class="clear"></div> 
 
+  <br/>
   <hr/>
+  <br/>
 
   <div>
 
-    The next thing we need for interactive <b>exploration</b> is easy
-    plotting. In the example below we have also employed a little more
-    programming to create a
+    Straightforward plotting encourages interactive exploration. The
+    example below employs a little more <span class="pz_text"
+    ref="coffee_note">programming</span> to create a
     [http://en.wikipedia.org/wiki/Weierstrass_function,Weierstrass
     function]---the definition of a function (line 4) and a cumulative
     sum (line 6) are easy to follow.
@@ -143,25 +157,56 @@
       <div data-file="weierstrass.coffee"></div>
     </div>
 
+
     <div class="right_col">
       <div data-eval="weierstrass.coffee"></div>
+    </div>
+
+    <div class="pz_note" id="coffee_note"> The code is
+      [http://en.wikipedia.org/wiki/CoffeeScript, CoffeeScript],
+      augmented with a matrix-friendly syntax.
     </div>
 
   </div>
 
   <div class="clear"></div> 
 
+  <br/>
   <hr/>
+  <br/>
 
-  Clearly interactive computation can be delivered in the browser
-  (<b>any browser</b>). Less clear is that we are using the same
-  technology as web developers---so its easy for them to contribute. A
-  small technical step, but a leap towards coordinating
-  the <b>multiple disciplines</b> needed to answer the Grand
-  Challenge. Web developers, for instance, are expert in presenting
-  technical information in interesting ways---such as the Van der Pol
-  oscillator below ($\ddot{x}-\mu(1-x^2)\dot{x}+x=0$). <span id =
-  "VdP-start-button" class = "text-button">click to
+  The code that defines a blab's content is stored in a
+  [http://en.wikipedia.org/wiki/Git_(software), GIT] repository; the
+  code for this blab resides in a public GitHub
+  [https://github.com/mathblab/grand-challenge, repository]. That
+  repository, and every blab's repository for the Grand Challenge,
+  belong to the [https://github.com/mathblab, mathblab] GitHub
+  organization. (For other blab organizations see [http://puzlet.org,
+  puzlet.org]).
+
+  The code that runs all blabs (i.e., that processes and presents the
+  content) is an open source application, puzlet.js. The app resides
+  in another GitHub [https://github.com/puzlet, organization].
+
+  We use GitHub extensively, and some features of puzlet.js rely on
+  its API. However, the core blab functionality can always be realized
+  with plain-old GIT and a simple web server.
+
+  <br/>
+  <hr/>
+  <br/>
+
+  Blabs are based on standard web technologies (HTML, CSS and
+  Javascript). This has several advantages: the longevity of a blab is
+  not threatened by changing technologies, nor is it tied to the
+  fortunes of a specific company, or a particular source of
+  funding. Because blabs use the same technology as web developers it
+  is easy for them to contribute.
+
+  Web developers, for instance, are expert in presenting technical
+  information in interesting ways. Just for example, consider the Van
+  der Pol oscillator, $\ddot{x}-\mu(1-x^2)\dot{x}+x=0~$,
+  below. <span id = "VdP-start-button" class = "text-button">click to
   start</span> <span id = "VdP-stop-button" class =
   "text-button">click to stop</span>.
 
@@ -192,53 +237,60 @@
 
   </div>
 
+  <br/>
+  <hr>
+  <br/>
+
+  It is easy to share code between blabs. For example, the Van der Pol
+  example above imports almost all of its code from
+  [http://stemblab.github.io/vanderpol-portrait, another blab] from
+  [http://stemblab.github.io, another organization].
+
+  From a development point of view, sharing code has obvious
+  advantages---efficiency and reliability are greatly enhanced. Less
+  obvious is that it allows a separation of model (which an engineer
+  might code) and presentation (which a web developer might code). For
+  example, [http://stemblab.github.io/fermi-pasta-ulam/, this blab] on
+  the Fermi-Pasta-Ulam paradox, imports its presentation from
+  [http://stemblab.github.io/mass-spring-vis/, here]. Thus, sharing
+  code is another way in which we can make it easy for users from
+  various disciplines to contribute to the Grand Challenge.
+
+  <br/>
   <hr/>
+  <br/>
 
-  <div class="left_col">
+  The guts of a blab is a collection of files that the puzlet.js app
+  can find, process and present to the user. The authorative version
+  of the files is managed using GIT, and served directly from
+  GitHub. However, the files may reside in other places when required.
+
+  For significant editing the files should be pulled to the devloper's
+  local machine where their favourite tools are available. Modified
+  (or new) files can then be pushed back to GitHub in the usual way.
   
-    The guts of a blab is just a collection of files, managed in a
-    [http://en.wikipedia.org/wiki/Git_(software), git] repository and
-    served statically to the browser (<i>statically</i> means without
-    any processing by the server). The web application that presents
-    these files, and provides all the features of a blab, puzlet.js,
-    is itself an [https://github.com/puzlet,open source project].
+  Many times, though, edits to files are never intended to be pushed
+  back to the main repository---perhaps they are simple changes in
+  parameters to revisit later, or to share with a friend. Or, perhaps
+  it is the answer to a homework problem. In these cases a blab's
+  files can be saved as a [http://en.wikipedia.org/wiki/GitHub#Gist,
+  gist]---either anonymously (without any login whatsoever) or using a
+  github account. For example, try making an edit above and then click
+  the "save" button.
 
-    This blab is managed by, and served (with <b>zero cost and
-    administration</b>) from <a href="http://github.com">GitHub</a>
-    (click the "Fork me on GitHub" banner). Blabs can be
-    distributed---spanning different repositories, users etc.---and
-    <b>share code</b> with each other. For instance, the Van der Pol
-    simulation above imports an ODE solver from X.
+  <br/>
+  <hr/>
+  <br/>
 
-    For serious development---or just for offline
-    viewing---repositories can be cloned to a user's local machine
-    (see the "Fork me on GitHub" banner at the top). At a local level
-    a user can use whatever tools (editor, GIT client, etc.) they
-    choose.
+  In conclusion, a blab is a collection of source controlled files,
+  presented by the puzlet.js application. The open source pulzet.js
+  app provides an intuitive mathematical interface and a foundation
+  for rich, community devloped technical documents. Being based on
+  standard web technologies, a blab can include practically
+  [http://puzlet.org/3d-demos/visjs/,any effect] available on the web.
 
-  </div>
-
-  <div class="right_col">
-
-    Some tools for "online" developement (without cloning the
-    repository locally) are available and others are being
-    developed. Clicking the "Save" button at the top of the page
-    creates either a GitHub [http://en.wikipedia.org/wiki/GitHub#Gist,
-    gist] (for easy sharing) or updates the repository. A gist can
-    even be created anonymously (i.e., without a GitHub account).
-
-    Our answer to the Grand Challenge is an open-source project based
-    on a collection of blabs. While embryonic, it us more than a
-    proposal---we have created an operational GitHub organization,
-    [https://github.com/stemweblab,STEMWebLab], in which this blab is
-    the first contribution.
-
-    To flourish, STEMWebLab initially needs input from the mathematical
-    education community---to help specify missing features, to advise
-    on classroom workflow. Ultimately it needs enthusiastic students,
-    teachers, mathematicians, scientists, engineers, web developers
-    and writers to blab about mathematics.
-
-  </div>
+  <br/>
+  <hr/>
+  <br/>
 
 </div>
