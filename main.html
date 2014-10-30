@@ -16,7 +16,7 @@
   <div class="left_col">
 
     <b>We respond to [https://twitter.com/MrHonner,@MrHonner]'s
-    [http://en.wikipedia.org/wiki/Web_standards,challenge] with a
+    challenge with a
     combination of open-source and web technologies. </b>
     
     In his challenge Honner imagines "A full-time staff of
@@ -36,35 +36,38 @@
 
     For inspiration, we look to Wikipedia and Linux. These projects
     rely on loosely-organized, grass-roots volunteers. Each
-    contributing according to their interests, abilities and, often,
-    to satisfy their own needs. In both cases---and also, we propose,
-    for the Grand Challenge---the key is to provide an environment
-    where contributors from different, but related, disciplines can
+    contributes according to their interests, abilities and, often,
+    to satisfy their own needs. In both cases,
+	the key is to provide an environment
+    where contributors from different disciplines can
     focus and multiply their efforts.
+	We propose that similar principles can be applied
+	to the Grand Challenge.
 
   </div>
 
   <div class="right_col">
 
-    We feel that the Grand Challenge should be a call to Students,
+    We feel that the Grand Challenge should be a call to students,
     teachers, mathematicians, scientists, engineers, web developers
-    and writers --- not to administrators or beurocrats or
-    financiers. To this end we have created a foundation for the Grand
-    Challenge based around standard web technologies (HTML, CSS and
-    Javascript) and source control (GIT) that:
+    and writers---not to administrators or bureaucrats or
+    financiers. To this end we have created a foundation based on the
+	following objectives:
 
     <ul>
-      <li>is modular, and in particular---</li>
-      <li>shares and reuses code;</li>
-      <li>is [http://en.wikipedia.org/wiki/Free_and_open-source_software,free
-      and open source];</li>
-      <li>has matrix-friendly syntax;</li>
-      <li>beautifully presents $\LaTeX$;</li>
-      <li>is free to maintain (zero server administration);</li>
-      <li>computes in the browser;</li>
-      <li>has an adaptable workflow, and in particular---</li>
-      <li>allows students to contribute, do homework, etc.;</li>
-      <li>encourages contribution from many disciplines.</li>
+	<li>[http://en.wikipedia.org/wiki/Free_and_open-source_software,
+		free and open source]</li>
+	<li>uses standard web technologies (HTML, CSS and
+	    JavaScript) and source control (GIT)</li>
+      <li>mathematical/scientific computation and interactive 
+		plotting/graphics in the browser</li>
+      <li>matrix-friendly syntax</li>
+      <li>beautifully presents $\LaTeX$</li>
+      <li>modular; easy to share and reuse code</li>
+      <li>adaptable workflow</li>
+      <li>encourages contribution from many disciplines</li>
+      <li>allows students to contribute, do homework, etc.</li>
+     <li>zero server administration</li>
     </ul>
 
     In summary, we propose a collection of rich source-controlled
@@ -82,24 +85,27 @@
 
   <div>
 
+	<h3>Web Laboratory---computation in the browser</h3>
+
     <div class="left_col">
 
-      We call documents such as this a <span class="pz_text"
-	ref="blab_note">blab</span>---short for web laboratory, like
+    We call documents such as this a <i>blab</i>---short 
+	for web laboratory, like
 	blog is short for web log.  Blabs are typically
-	short(ish), modular combinations of text, code, plots
+	short(ish), modular combinations of text, math, code, plots
 	and animation.
 
       A simple example computation is on the right. You can edit the
-      upper (grey) box, press shift+enter, and see the results in the
+      upper (grey) box, press <b>shift+enter</b>, 
+		and see the results in the
       lower (dashed) box.
 
-      Note that all computation is within the browser, without
+      <i>All computation is performed in the browser</i>, without
       interaction with any server.
 
     </div>    
 
-    <div class="right_col">
+    <div class="right_col" style="margin-top: 10px">
       <div data-file="basics.coffee"></div>
       <div data-eval="basics.coffee"></div>
     </div>
@@ -117,6 +123,8 @@
   <br/>
 
   <div>
+
+	<h3>Matrix-friendly syntax</h3>
 
     One of Matlab's (and Octave's) great attributes is a
     matrix-friendly syntax. Linear algebra is the cornerstone of
@@ -145,6 +153,8 @@
   <br/>
 
   <div>
+
+	<h3>Interactive plotting</h3>
 
     Straightforward plotting encourages interactive exploration. The
     example below employs a little more <span class="pz_text"
@@ -175,32 +185,34 @@
   <hr/>
   <br/>
 
-  The code that defines a blab's content is stored in a
-  [http://en.wikipedia.org/wiki/Git_(software), GIT] repository; the
-  code for this blab resides in a public GitHub
-  [https://github.com/mathblab/grand-challenge, repository]. That
-  repository, and we propose, every blab's repository for the Grand
-  Challenge, belong to the [https://github.com/mathblab, mathblab]
-  GitHub organization.
+	<h3>Open source, hosted on GitHub</h3>
+
+
+The code for this blab resides in a public GitHub
+  [https://github.com/mathblab/grand-challenge, repository]
+which, in turn, belongs to the [https://github.com/mathblab, mathblab]
+  GitHub organization.  We propose that every blab for the
+Grand Challenge would be such a repository in the mathblab organization.
 
   The code that runs all blabs (i.e., that processes and presents the
   content) is an open source application, puzlet.js. The app resides
   in another GitHub [https://github.com/puzlet, organization].
 
   We use GitHub extensively, and some features of puzlet.js rely on
-  its API. However, the core blab functionality can always be realized
-  with plain-old GIT and a simple web server.
+  its API (more on this below). However, the core blab functionality can always be realized
+  with plain-old [http://en.wikipedia.org/wiki/Git_(software), GIT] and a simple web server.
 
   <br/>
   <hr/>
   <br/>
 
+	<h3>Based on standard web technologies</h3>
+
   Blabs are based on standard web technologies (HTML, CSS and
-  Javascript). This has several advantages: the longevity of a blab is
+  JavaScript). This has several advantages: the longevity of a blab is
   not threatened by changing technologies, nor is it tied to the
   fortunes of a specific company, or a particular source of
-  funding. Because blabs use the same technology as web developers it
-  is easy for them to contribute.
+  funding. Moreover, blabs use the same technology that web developers use, and so it is easy for them to contribute.
 
   Web developers, for instance, are expert in presenting technical
   information in interesting ways. Just for example, consider the Van
@@ -240,6 +252,8 @@
   <hr>
   <br/>
 
+<h3>Share and reuse code</h3>
+
   It is easy to share code between blabs. For example, the Van der Pol
   example above imports almost all of its code from
   [http://stemblab.github.io/vanderpol-portrait, another blab] from
@@ -250,7 +264,7 @@
   obvious is that it allows a separation of model (which an engineer
   might code) and presentation (which a web developer might code). For
   example, [http://stemblab.github.io/fermi-pasta-ulam/, this blab] on
-  the Fermi-Pasta-Ulam paradox, imports its presentation from
+  the Fermi-Pasta-Ulam paradox imports its presentation from
   [http://stemblab.github.io/mass-spring-vis/, here]. Thus, sharing
   code is another way in which we can make it easy for users from
   various disciplines to contribute to the Grand Challenge.
@@ -259,13 +273,15 @@
   <hr/>
   <br/>
 
+<h3>Adaptable workflow</h3>
+
   The guts of a blab is a collection of files that the puzlet.js app
-  can find, process and present to the user. The authorative version
+  can find, process and present to the user. The authoritative version
   of the files is managed using GIT, and served directly from
   GitHub. However, the files may reside in other places when required.
 
-  For significant editing the files should be pulled to the devloper's
-  local machine where their favourite tools are available. Modified
+  For significant editing the files should be pulled to the developer's
+  local machine where their favorite tools are available. Modified
   (or new) files can then be pushed back to GitHub in the usual way.
   
   Many times, though, edits to files are never intended to be pushed
@@ -274,7 +290,7 @@
   it is the answer to a homework problem. In these cases a blab's
   files can be saved as a [http://en.wikipedia.org/wiki/GitHub#Gist,
   gist]---either anonymously (without any login whatsoever) or using a
-  github account. For example, try making an edit above and then click
+  GitHub account. For example, try making an edit above and then click
   the "save" button.
 
   <br/>
@@ -282,14 +298,14 @@
   <br/>
 
   In conclusion, a blab is a collection of source controlled files,
-  presented by the puzlet.js application. The open source pulzet.js
+  presented by the puzlet.js application. The open source puzlet.js
   app provides an intuitive mathematical interface and a foundation
-  for rich, community-devloped technical documents. Being based on
+  for rich, community-developed technical documents. Being based on
   standard web technologies, a blab can include practically
   [http://puzlet.org/3d-demos/visjs/,any effect] available on the web.
 
   A collection of blabs, organized as an open-source software project,
-  would be free, comprehensive, modular and adaptable. While sucess
+  would be free, comprehensive, modular and adaptable. While success
   ultimately rests with a community of volunteers, we propose that
   blabs are an ideal foundation to answer the Grand Challenge.
   
